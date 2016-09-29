@@ -15,7 +15,8 @@ sqld=nextcloud
 removeifexists=true #removes the backup folder if present
 
 # Don't change below this line
-if [ -d "$bdir" ] && [ $removeifexists -eq true]; then
+if [ -d "$bdir" ] && $removeifexists -eq true
+then
     echo "nextcloud backup directory $bdir already exists removing directory"
     rm -rf $bdir
 fi
